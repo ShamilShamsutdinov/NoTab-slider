@@ -1,0 +1,430 @@
+.platform {
+  margin-bottom: 247px;
+
+  &__content {
+    display: flex;
+    padding: 14px 62px 0px 0px;
+    margin-bottom: 15px;
+
+    &_left {
+      padding: 125px 100px 0px 0px;
+    }
+
+    &_right {
+      position: relative;
+      max-width: 700px;
+
+      &::after{
+        content: '';
+        position: absolute;
+        background: url(../images/blurpink.svg);
+        background-repeat: no-repeat;
+        filter: blur(75px);
+        position: absolute;
+        width: 691px;
+        height: 783px;
+        top: -140px;
+        left: -200px;
+
+      }
+    }
+  }
+
+  &__title {
+    @include fonts('Montserrat-Bold', 64px, 70px, 700, $white);
+    margin: 0 0 89px 0px;
+  }
+
+  &__block_text {
+    position: relative;
+    max-width: 470px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 261px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      background: rgba(96, 92, 234, 0.5);
+      top: -33px;
+      left: 0px;
+      filter: blur(50px);
+    }
+  }
+
+  &__subtitle {
+    @include fonts('Montserrat-Bold', 35px, 70px, 700, $white);
+  }
+
+  &__text_img {
+    position: relative;
+    background-image: url(../images/Line1.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 200px;
+    height: 128px;
+    overflow: hidden;
+    z-index: 6;
+
+  }
+
+  &__text {
+    position: relative;
+    @include fonts('Noto-Sans', 20px, 27px, 400, $white);
+    margin-left: 28px;
+    margin-bottom: 5px;
+    z-index: 3;
+  }
+
+  &__iphone {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 84px 11px;
+
+  }
+
+  &__social_mobile {
+    display: none;
+  }
+
+
+  &__social {
+    position: relative;
+    display: flex;
+
+    &_link:not(:last-child) {
+      margin-right: 28px;
+    }
+
+    &_link:hover {
+      background-color: $hover;
+      border-radius: 10px;
+    }
+
+  }
+
+  @media  screen and (max-width: 1340px){
+    &{
+      margin-bottom: 100px;
+    }
+
+     &__title{
+       font-size: 60px;
+     }
+
+     &__block_text{
+      margin-bottom: 180px;
+     }
+
+     &__subtitle{
+      font-size: 28px;
+     }
+
+  }
+
+  @media(max-width: 992px) {
+    &__subtitle {
+      display: none;
+    }
+
+    &__social_img {
+      display: none;
+    }
+
+    &__social_mobile {
+      display: block;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    &__social_img_appStore:hover {
+      background-color: $hover;
+      border-radius: 10px;
+    }
+
+    &__social_img_google:hover {
+      background-color: $hover;
+      border-radius: 10px;
+    }
+
+    &__social_img_appStore {
+      margin-right: 23px;
+
+    }
+
+    &__subtitle_mobile {
+      @include fonts('Montserrat-Bold', 24px, 29px, 700, $white);
+      margin-bottom: 33px;
+    }
+  }
+
+  @media  screen and (max-width: 768px){
+    &__content_left{
+      padding: 0px;
+    }
+
+    &__block_text{
+      margin-bottom: 70px;
+    }
+
+    &__title{
+      position: relative;
+      font-size: 30px;
+      margin-bottom: 50px;
+      z-index: 6;
+    }
+
+    &__text{
+      font-size: 15px;
+    }
+
+  }
+
+
+
+  @media(max-width: 576px) {
+    & {
+      margin-bottom: 60px;
+
+    }
+
+    &__title {
+      position: relative;
+      @include fonts('Montserrat-Bold', 35px, 40px, 700, $white);
+      margin: 0 0 22px 0px;
+      z-index: 6;
+    }
+
+    &__content {
+      padding: 0px;
+    }
+
+    &__blur {
+      display: none;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__text_img {
+      display: none;
+    }
+
+    &__iphone {
+      position: relative;
+      z-index: 2;
+      margin: 0 0 41px 0px;
+
+    }
+
+    &__content_left {
+      padding: 36px 0px 0px 0px;
+      margin-right: 15px;
+    }
+
+    &__block_text {
+      width: 240px;
+      margin-bottom: 0px;
+    }
+
+    &__text {
+      @include fonts('Noto-Sans', 16px, 22px, 400, $white);
+      margin: 0px 0px 0px 0px;
+
+    }
+
+    &__subtitle {
+      display: none;
+    }
+
+    &__subtitle_mobile {
+      @include fonts('Montserrat-Bold', 24px, 29px, 700, $white);
+      margin-bottom: 33px;
+    }
+
+    &__social_mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    &__social_block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__social_img_appStore {
+      margin: 0px 0px 23px 0px;
+
+
+    }
+
+    &__social_img {
+      display: none;
+    }
+
+
+
+  }
+}
+
+.cookie {
+  background: #212834;
+  margin-bottom: 61px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 23px 21px 100px;
+
+    &_text {
+      @include fonts('Noto-Sans', 14px, 19px, 400, $white);
+    }
+
+    &_button {
+      @include fonts('Noto-Sans', 14px, 19px, 400, $white);
+      padding: 15px 56px 15px 58px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 0.5px solid #FFFFFF;
+      border-radius: 6px;
+
+      &:hover {
+        background-color: $hover;
+        border-radius: 10px;
+      }
+    }
+
+  }
+
+  @media  screen and (max-width: 992px){
+     &__content_text{
+      margin-right: 10px;
+     }
+  }
+
+  @media  screen and (max-width: 768px){
+     &__content_text{
+       font-size: 11px;
+     }
+  }
+
+  @media(max-width: 576px) {
+
+    & {
+      display: none;
+    }
+  }
+}
+
+.connection {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0px 76px 0px 74px;
+
+  &__card {
+    width: 503px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+
+
+    &_one {
+      padding: 62px 40px 60px 55px;
+      margin-right: 80px;
+    }
+
+    &_two {
+      padding: 98px 168px 66px 52px;
+    }
+
+    &_text {
+      @include fonts('Noto-Sans-Bold', 30px, 41px, 700, $white);
+      margin-bottom: 30px;
+    }
+
+    &_link {
+      @include fonts('Noto-Sans', 24px, 33px, 400, $white);
+      text-decoration-style: solid;
+    }
+
+  }
+
+  @media screen and (max-width: 1340px){
+
+    &__card_one {
+      padding: 30px;
+      margin-right: 20px;
+    }
+
+    &__card_two {
+      padding: 30px;
+    }
+
+    &__card_text {
+      font-size: 20px;
+      margin-bottom: 0px;
+    }
+
+  }
+
+  @media(max-width: 992px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__card {
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__card_one {
+      margin-right: 0px;
+    }
+  }
+
+  @media(max-width: 576px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+      margin: 0px;
+    }
+
+    &__card {
+      max-width: 345px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+    }
+
+    &__card_text {
+      @include fonts('Noto-Sans-Bold', 24px, 33px, 700, $white);
+    }
+
+    &__card_link {
+      @include fonts('Noto-Sans', 18px, 25px, 400, $white);
+    }
+  }
+
+  @media(max-width: 370px) {
+     &__card{
+      max-width: 290px;
+     }
+  }
+
+}
